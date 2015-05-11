@@ -1,0 +1,28 @@
+<head>
+  <title>Shitty 8ball</title>
+</head>
+
+<body>
+  <div>
+    <h1>Shitty 8ball</h1>
+  </div>
+  {{> eightBall }}
+</body>
+
+<template name="eightBall">
+  <div class="circle eightball">
+    <div class="valign-wrapper">
+      <p class="valign message"> {{ message }} </p>
+    </div>
+  </div>
+  {{#if shakeAvailable}}
+    <div class="center-align button-container">
+      <a href="#"><h1 class="clickme">Shake!</h1></a>
+    </div>
+  {{else}}
+    <div class="center-align button-container">
+      <a href="#"><h1 class="clickme">Click Me</h1></a>
+    </div>
+  {{/if}}     
+  
+</template>
